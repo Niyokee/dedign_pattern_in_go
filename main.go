@@ -2,10 +2,11 @@ package main
 
 import (
 	"DesignPattern/chapter1"
+	"DesignPattern/chapter2"
 	"fmt"
 )
 
-func main() {
+func chapter1_main() {
 	bs := chapter1.NewBookShelf()
 	bs.AppendBook(*chapter1.NewBook("Around the World in 80 days"))
 	bs.AppendBook(*chapter1.NewBook("Bible"))
@@ -23,4 +24,11 @@ func main() {
 		b := it.Next()
 		fmt.Println(b.GetName())
 	}
+}
+
+func main() {
+	s := "Hello"
+	p := chapter2.NewPrintBanner(s)
+	p.PrintWeak()
+	p.PrintStrong()
 }
