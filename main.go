@@ -28,6 +28,9 @@ func chapter1_main() {
 
 func main() {
 	s := "Hello"
+	// ここでは<i>Printerを使ってプログラミングをしている
+	// →実際に呼び出しているのはPrintBannerだがPrintの実装を持つ
+	// ここでPrintBannerの存在は完全に隠されている。
 	p := chapter2.NewPrintBanner(s)
 	p.PrintWeak()
 	p.PrintStrong()
