@@ -7,20 +7,10 @@ IDCard: メソッドuseを実装している
 IdCardFactory: メソッドcreateProduct, registerProductを実装しているクラス
  */
 
-type product interface {
-	use()
-}
 
-type factorize interface {
-	createProduct(owner string) string
-	registerProduct(p *product)
-}
-type factory struct {
-	factorize
-}
-
-func (f factory) NewProduct(owner string) *product {
-	p := f.createProduct(owner)
-	f.registerProduct(p)
-	return p
+// 製品を表現したクラス。
+// 抽象メソッドのuse()のみ宣言されている。
+// 製品は何はともあれ使える
+type Product interface {
+	Use()
 }

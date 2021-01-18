@@ -47,7 +47,7 @@ func chapter1_main() {
 	}
 }
 
-func main() {
+func chapter2_main() {
 	s := "Hello"
 	// ここでは<i>Printerを使ってプログラミングをしている
 	// →実際に呼び出しているのはPrintBannerだがPrintの実装を持つ
