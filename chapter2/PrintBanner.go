@@ -4,7 +4,7 @@ package chapter2
 // ここで<i>Printerを実装する。
 // type Bannerを変換する
 type PrintBanner struct {
-	Banner
+	*Banner
 }
 
 // そのまま使っているけど、ここのロジックで変換される
@@ -17,7 +17,5 @@ func (p PrintBanner) PrintStrong()  {
 }
 
 func NewPrintBanner(s string) *PrintBanner {
-	p := new(PrintBanner)
-	p.string = s
-	return p
+	return &PrintBanner{&Banner{string: s}}
 }

@@ -1,4 +1,4 @@
-package chapter4
+package factory
 
 /*
 product: 抽象メソッドuseのみ定義されている抽クラス

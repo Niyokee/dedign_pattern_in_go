@@ -8,21 +8,21 @@ type CharDisplay struct {
 	Char rune // rune to be displayed
 }
 
-func (c *CharDisplay) open()  {
+func (c *CharDisplay) open() {
 	fmt.Print("<<")
 }
 
-func (c *CharDisplay) print()  {
+func (c *CharDisplay) print() {
 	fmt.Print(string(c.Char))
 }
 
-func (c *CharDisplay) close()  {
+func (c *CharDisplay) close() {
 	fmt.Println(">>")
 }
 func NewCharDisplay(r rune) *CharDisplay {
 	charDisplay := &CharDisplay{
 		AbstractDisplay: &AbstractDisplay{},
-		Char: r,
+		Char:            r,
 	}
 	charDisplay.printer = charDisplay
 	return charDisplay

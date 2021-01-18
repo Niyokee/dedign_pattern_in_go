@@ -3,8 +3,29 @@ package main
 import (
 	"DesignPattern/chapter1"
 	"DesignPattern/chapter2"
+	"DesignPattern/chapter3"
+	"DesignPattern/chapter5"
 	"fmt"
 )
+
+func main() {
+	obj1 := chapter5.GetInstance()
+	obj2 := chapter5.GetInstance()
+	fmt.Println(obj1 == obj2)
+}
+
+func chapter3_main() {
+	// Hを持ったCharDisplayのインスタンスを一個作る
+	d1 := chapter3.NewCharDisplay('H')
+	// Hello Worldを持ったStringDisplayのインスタンスを一個作る
+	d2 := chapter3.NewStringDisplay("Hello World")
+	d3 := chapter3.NewStringDisplay("こんにちは")
+
+	d1.Display()
+	d2.Display()
+	d3.Display()
+
+}
 
 func chapter1_main() {
 	bs := chapter1.NewBookShelf()
