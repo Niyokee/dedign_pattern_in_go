@@ -5,10 +5,19 @@ import (
 	"DesignPattern/chapter2"
 	"DesignPattern/chapter3"
 	"DesignPattern/chapter5"
+	"DesignPattern/chapter7"
 	"fmt"
 )
 
+
 func main() {
+	t := chapter7.TextBuilder{}
+	fmt.Printf("%T", t)
+	d := chapter7.Director{&chapter7.TextBuilder{}}
+	fmt.Println(d)
+	fmt.Println(d.Construct())
+}
+func chapter5_main() {
 	obj1 := chapter5.GetInstance()
 	obj2 := chapter5.GetInstance()
 	fmt.Println(obj1 == obj2)
